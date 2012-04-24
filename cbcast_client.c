@@ -36,8 +36,9 @@
 #include <rpc/rpc.h>
 #include "cbcast.h"
 
-main(int argc, char *argv[]) {
+int main(void) {
 
+#if 0
     CLIENT *cl;
     int *answer;
     char *message;
@@ -57,7 +58,7 @@ main(int argc, char *argv[]) {
 
     message = argv[2];
 
-    answer = start_1(&message,cl); 
+    //answer = start_1(&message,cl); 
 
     if (answer == (int *) NULL) { 
         printf("Error: state could not produce meaningful results"); 
@@ -68,4 +69,5 @@ main(int argc, char *argv[]) {
 
 
     return (0);
+#endif
 } 

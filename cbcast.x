@@ -10,10 +10,18 @@
 
 **/
 
+struct cbcast_params {
+    int groupID;
+    char *IP;
+    char *message;
+};
 
 program CBCASTPROG {                /* value to register the program */
     version CBCASTVERS {            /* version must be assigned a value */           
-        int START(string)      = 1;   /* this is a service function */  
-        int NUMERO(void)       = 2;  
-    } =1;                          /* version value */
+        int CREATEGROUP(cbcast_params)  = 1;
+        int JOINGROUP(cbcast_params)    = 2;
+        int LEAVEGROUP(cbcast_params)   = 3;
+        int SENDGROUP(cbcast_params)    = 4;
+        int RECEIVEGROUP(cbcast_params) = 5;
+    } = 1;                          /* version value */
 } = 0x20000003;                    /* program value */   

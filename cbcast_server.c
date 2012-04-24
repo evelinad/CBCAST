@@ -14,11 +14,56 @@
 #include <unistd.h>
 
 #include "cbcast.h"
+#include "_cbcast.h"
+
+
+
+
+int *creategroup_1_svc(cbcast_params *params, struct svc_req *req)
+{
+    if (params == NULL)
+        return -1;
+    
+}
+
+int * joingroup_1_svc(cbcast_params *params, struct svc_req *req)
+{
+    if (params == NULL)
+        return -1;
+    
+}
+
+int * leavegroup_1_svc(cbcast_params *params, struct svc_req *req)
+{
+    if (params == NULL)
+        return -1;
+    
+}
+
+int * sendgroup_1_svc(cbcast_params *params, struct svc_req *req)
+{
+    if (params == NULL)
+        return -1;
+    
+}
+
+int * receivegroup_1_svc(cbcast_params *params, struct svc_req *req)
+{
+    if (params == NULL)
+        return -1;
+    
+}
+
+
+
+
+
+
+#if 0
 
 pthread_t tid1;  /* Descritores para as threads */
 char clt_address[32];
 FILE *flog;    /* debug do sistema */
-
 
 /* Rotina a ser executada por uma das threads */
 void *p1 () {
@@ -88,4 +133,4 @@ int *start_1_svc(char **endereco, struct svc_req *rqstp) {
 
        return &result;
 }
-
+#endif
